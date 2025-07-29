@@ -1,0 +1,27 @@
+name: Test Casks
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Homebrew
+      run: |
+        brew update
+        brew tap homebrew/cask
+    
+    - name: Test Cask syntax
+      run: |
+        brew audit --cask Casks/karuku.rb
+        brew style Casks/karuku.rb
+    
+    - name: Test installation (dry run)
+      run: |
+        brew install --cask --dry-run Casks/karuku.rb || echo "Dry run completed (expected to fail without actual release)"

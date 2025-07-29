@@ -1,0 +1,55 @@
+name: Auto-update Cask
+
+on:
+  repository_dispatch:
+    types: [new-release]
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'New version number'
+        required: true
+        type: string
+
+jobs:
+  update:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Setup Homebrew
+      run: |
+        brew update
+    
+    - name: Update Cask
+      run: |
+        chmod +x ./scripts/update-version.sh
+        ./scripts/update-version.sh ${{ github.event.inputs.version }}
+    
+    - name: Verify changes
+      run: |
+        brew audit --cask Casks/karuku.rb
+        brew style Casks/karuku.rb
+    
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      with:
+        title: "Update Karuku to v${{ github.event.inputs.version }}"
+        commit-message: "Update Karuku to v${{ github.event.inputs.version }}"
+        body: |
+          ## Auto-generated update
+          
+          This PR updates Karuku to version ${{ github.event.inputs.version }}.
+          
+          ### Changes
+          - Updated version number
+          - Updated SHA256 hashes for both architectures
+          
+          ### Verification
+          - [x] Cask syntax validation passed
+          - [x] Style check passed
+          
+          This PR was automatically generated from the latest release.
+        branch: update-v${{ github.event.inputs.version }}
+        delete-branch: true
