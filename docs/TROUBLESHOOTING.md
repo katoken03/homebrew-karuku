@@ -39,8 +39,8 @@ brew uninstall --cask karuku
 brew install --cask karuku
 
 # If problem persists, check if you have the latest tap
-brew untap kato/karuku
-brew tap kato/karuku
+brew untap katoken03/karuku
+brew tap katoken03/karuku
 brew install --cask karuku
 ```
 
@@ -232,7 +232,7 @@ log show --predicate 'process == "Karuku"' --last 1h
 
 ```bash
 # Test connectivity to GitHub releases
-curl -I https://github.com/kato/karuku/releases/latest
+curl -I https://github.com/katoken03/karuku/releases/latest
 
 # Check for proxy/firewall issues
 brew --env | grep -i proxy
@@ -280,9 +280,9 @@ file "/Applications/Karuku.app/Contents/MacOS/Karuku"
 
 ### Where to Get Help
 
-- **Karuku Issues**: [Main Repository Issues](https://github.com/kato/karuku/issues)
+- **Karuku Issues**: [Main Repository Issues](https://github.com/katoken03/karuku/issues)
 - **Homebrew Issues**: [Homebrew Troubleshooting](https://docs.brew.sh/Troubleshooting)
-- **Tap Issues**: [Homebrew-Karuku Issues](https://github.com/kato/homebrew-karuku/issues)
+- **Tap Issues**: [Homebrew-Karuku Issues](https://github.com/katoken03/homebrew-karuku/issues)
 
 ### Information to Include in Bug Reports
 

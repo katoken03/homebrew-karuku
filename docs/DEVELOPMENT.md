@@ -31,7 +31,7 @@ homebrew-karuku/
 
 ```bash
 # Clone the repository
-git clone https://github.com/kato/homebrew-karuku.git
+git clone https://github.com/katoken03/homebrew-karuku.git
 cd homebrew-karuku
 
 # Make scripts executable
@@ -110,7 +110,7 @@ When editing `Casks/karuku.rb` manually:
 
 3. **URL pattern (if changed):**
    ```ruby
-   url "https://github.com/kato/karuku/releases/download/v#{version}/Karuku-#{version}-#{arch}.dmg"
+   url "https://github.com/katoken03/karuku/releases/download/v#{version}/Karuku-#{version}-#{arch}.dmg"
    ```
 
 4. **Dependencies (if macOS requirements change):**
@@ -304,7 +304,7 @@ Set up webhook from main repo to automatically trigger updates:
     curl -X POST \
       -H "Authorization: token ${{ secrets.HOMEBREW_TOKEN }}" \
       -H "Accept: application/vnd.github.v3+json" \
-      https://api.github.com/repos/kato/homebrew-karuku/dispatches \
+      https://api.github.com/repos/katoken03/homebrew-karuku/dispatches \
       -d '{"event_type":"new-release","client_payload":{"version":"${{ github.event.release.tag_name }}"}}'
 ```
 

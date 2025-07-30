@@ -4,7 +4,7 @@
 
 ```bash
 # Add the Karuku tap
-brew tap kato/karuku
+brew tap katoken03/karuku
 
 # Install Karuku
 brew install --cask karuku
@@ -20,7 +20,7 @@ brew install --cask karuku
 ### 2. Add the Tap
 
 ```bash
-brew tap kato/karuku
+brew tap katoken03/karuku
 ```
 
 This adds the Karuku repository to your Homebrew installation.
@@ -86,7 +86,7 @@ If you want to test the latest development version:
 
 ```bash
 # Clone this repository
-git clone https://github.com/kato/homebrew-karuku.git
+git clone https://github.com/katoken03/homebrew-karuku.git
 
 # Install from local cask file
 brew install --cask ./homebrew-karuku/Casks/karuku.rb
@@ -94,7 +94,7 @@ brew install --cask ./homebrew-karuku/Casks/karuku.rb
 
 ### Direct Download
 
-You can also download releases directly from the [main repository](https://github.com/kato/karuku/releases).
+You can also download releases directly from the [main repository](https://github.com/katoken03/karuku/releases).
 
 ## Troubleshooting
 
@@ -116,7 +116,7 @@ You can also download releases directly from the [main repository](https://githu
 
 ### Getting Help
 
-- [Main Repository Issues](https://github.com/kato/karuku/issues)
+- [Main Repository Issues](https://github.com/katoken03/karuku/issues)
 - [Homebrew Troubleshooting](https://docs.brew.sh/Troubleshooting)
 
 ## Next Steps
@@ -125,4 +125,4 @@ After installation:
 1. Launch Karuku from Applications or menu bar
 2. Configure directories to monitor
 3. Set up image optimization preferences
-4. Review the [main documentation](https://github.com/kato/karuku#readme)
+4. Review the [main documentation](https://github.com/katoken03/karuku#readme)

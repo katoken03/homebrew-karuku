@@ -14,7 +14,7 @@ fi
 echo "🔄 Updating Karuku to version $VERSION..."
 
 # GitHub repository info
-REPO="kato/karuku"
+REPO="katoken03/karuku"
 CASK_FILE="Casks/karuku.rb"
 
 # Download URLs
@@ -72,14 +72,14 @@ cask "karuku" do
   app "Karuku.app"
   
   # アンインストール時の処理
-  uninstall quit: "com.kato.karuku"
+  uninstall quit: "com.katoken03.karuku"
   
   # 完全削除時のクリーンアップ
   zap trash: [
     "~/Library/Application Support/Karuku",
-    "~/Library/Preferences/com.kato.karuku.plist",
+    "~/Library/Preferences/com.katoken03.karuku.plist",
     "~/Library/Logs/Karuku",
-    "~/Library/Caches/com.kato.karuku"
+    "~/Library/Caches/com.katoken03.karuku"
   ]
 end
 EOF

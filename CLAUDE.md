@@ -8,7 +8,7 @@ KarukuアプリケーションをHomebrew Caskで配布するための専用Tap�
 
 ### リポジトリ構成
 - **リポジトリ名**: homebrew-karuku
-- **GitHub URL**: https://github.com/kato/homebrew-karuku
+- **GitHub URL**: https://github.com/katoken03/homebrew-karuku
 - **ローカルパス**: /Users/kato/mcp_folder/homebrew-karuku
 - **メインアプリとの関係**: 完全分離（異なるリポジトリ）
 
@@ -57,11 +57,11 @@ cask "karuku" do
     sha256 "Intel版のSHA256ハッシュ（リリース時に自動取得）"
   end
   
-  url "https://github.com/kato/karuku/releases/download/v#{version}/Karuku-#{version}-#{arch}.dmg"
+  url "https://github.com/katoken03/karuku/releases/download/v#{version}/Karuku-#{version}-#{arch}.dmg"
   
   name "Karuku"
   desc "Image optimization Electron app with automatic directory monitoring"
-  homepage "https://github.com/kato/karuku"
+  homepage "https://github.com/katoken03/karuku"
   
   # 最小macOSバージョン
   depends_on macos: ">= :big_sur"
@@ -100,7 +100,7 @@ Intel版: Karuku-{version}-x64.dmg
 
 ```bash
 # Tapの追加
-brew tap kato/karuku
+brew tap katoken03/karuku
 
 # Karukuのインストール
 brew install --cask karuku
@@ -301,7 +301,7 @@ tail -f /opt/homebrew/var/log/brew.log
 
 ## 関連リンク
 
-- [メインKarukuリポジトリ](https://github.com/kato/karuku)
+- [メインKarukuリポジトリ](https://github.com/katoken03/karuku)
 - [Homebrew Cask公式ドキュメント](https://docs.brew.sh/Cask-Cookbook)
 - [electron-builder設定](https://www.electron.build/)
 

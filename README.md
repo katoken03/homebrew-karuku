@@ -1,12 +1,12 @@
 # Karuku Homebrew Tap
 
-This tap provides [Karuku](https://github.com/kato/karuku), an image optimization Electron app that automatically monitors directories and optimizes PNG files using pngquant.
+This tap provides [Karuku](https://github.com/katoken03/karuku), an image optimization Electron app that automatically monitors directories and optimizes PNG files using pngquant.
 
 ## Installation
 
 ```bash
 # Add the tap
-brew tap kato/karuku
+brew tap katoken03/karuku
 
 # Install Karuku
 brew install --cask karuku
@@ -58,12 +58,12 @@ Karuku is a powerful image optimization tool that:
 - Supports both Apple Silicon and Intel Macs natively
 - Includes automatic pngquant installation and management
 
-For more information, visit the [main repository](https://github.com/kato/karuku).
+For more information, visit the [main repository](https://github.com/katoken03/karuku).
 
 ## Support
 
-- [Issues](https://github.com/kato/karuku/issues) - Report bugs or request features
-- [Documentation](https://github.com/kato/karuku#readme) - Full documentation
+- [Issues](https://github.com/katoken03/karuku/issues) - Report bugs or request features
+- [Documentation](https://github.com/katoken03/karuku#readme) - Full documentation
 
 ## License
 

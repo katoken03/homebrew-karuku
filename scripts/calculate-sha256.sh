@@ -14,7 +14,7 @@ if [ -z "$VERSION" ]; then
   exit 1
 fi
 
-REPO="kato/karuku"
+REPO="katoken03/karuku"
 
 calculate_sha256() {
   local arch=$1
