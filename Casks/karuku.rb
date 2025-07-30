@@ -3,12 +3,12 @@ cask "karuku" do
   
   on_arm do
     version "1.0.0"
-    sha256 "ARM64版のSHA256ハッシュ（リリース時に自動取得）"
+    sha256 "cb67dace22db3feee9855d2e5d46698ca39af02e0b8879e2d4ac70aae2c4337a"
   end
   
   on_intel do
     version "1.0.0" 
-    sha256 "Intel版のSHA256ハッシュ（リリース時に自動取得）"
+    sha256 "b47b444a3899d508595fcd4ae4f0781bf965b4b4b1e45ee6292bcd5751cf4825"
   end
   
   url "https://github.com/katoken03/karuku/releases/download/v#{version}/Karuku-#{version}-#{arch}.dmg"
@@ -17,15 +17,12 @@ cask "karuku" do
   desc "Image optimization Electron app with automatic directory monitoring"
   homepage "https://github.com/katoken03/karuku"
   
-  # 最小macOSバージョン
   depends_on macos: ">= :big_sur"
   
   app "Karuku.app"
   
-  # アンインストール時の処理
   uninstall quit: "com.katoken03.karuku"
   
-  # 完全削除時のクリーンアップ
   zap trash: [
     "~/Library/Application Support/Karuku",
     "~/Library/Preferences/com.katoken03.karuku.plist",
