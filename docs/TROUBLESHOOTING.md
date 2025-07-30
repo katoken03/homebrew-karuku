@@ -174,11 +174,11 @@ brew upgrade --cask karuku
 brew update
 
 # Check tap status
-brew tap kato/karuku
+brew tap katoken03/karuku
 
 # Force tap update
-brew untap kato/karuku
-brew tap kato/karuku
+brew untap katoken03/karuku
+brew tap katoken03/karuku
 
 # Verify latest version is available
 brew info --cask karuku
