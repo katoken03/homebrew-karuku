@@ -2,13 +2,13 @@ cask "karuku" do
   arch arm: "arm64", intel: "x64"
   
   on_arm do
-    version "1.0.0"
-    sha256 "cb67dace22db3feee9855d2e5d46698ca39af02e0b8879e2d4ac70aae2c4337a"
+    version "1.0.1"
+    sha256 "d2c4ddb112c111bb661ba9b4d9a93af0b31554cbb9567007f126ac68a3369f99"
   end
   
   on_intel do
-    version "1.0.0" 
-    sha256 "b47b444a3899d508595fcd4ae4f0781bf965b4b4b1e45ee6292bcd5751cf4825"
+    version "1.0.1" 
+    sha256 "4d7034976baed09eeea845e3533f15c0c1772ad81dea8d751fec5d4fbe0f52c9"
   end
   
   url "https://github.com/katoken03/karuku/releases/download/v#{version}/Karuku-#{version}-#{arch}.dmg"

@@ -65,6 +65,24 @@ For more information, visit the [main repository](https://github.com/katoken03/k
 - [Issues](https://github.com/katoken03/karuku/issues) - Report bugs or request features
 - [Documentation](https://github.com/katoken03/karuku#readme) - Full documentation
 
+## Troubleshooting
+
+### "Karuku.app is damaged and can't be opened" エラー
+
+これはmacOSのセキュリティ機能によるものです。以下の方法で解決できます：
+
+**方法1（推奨）:**
+1. Finderでアプリケーションフォルダを開く
+2. Karuku.appを右クリック
+3. 「開く」を選択
+4. 警告ダイアログで「開く」をクリック
+
+**方法2:**
+```bash
+sudo xattr -r -d com.apple.quarantine /Applications/Karuku.app
+open /Applications/Karuku.app
+```
+
 ## License
 
 Karuku is distributed under the same license as specified in the main repository.
